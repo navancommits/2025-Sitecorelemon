@@ -7,6 +7,12 @@
 ## Description
 ⟹ This is a Chrome plugin that can be useful to check if a Sitecore Item is present in XM Cloud preview and Experience edge endpoints - across different projects/environments, once configured. 
 
+### XMC Item Finder Architecture Diagrams
+![Chrome Plugin Entities](docs/diagram/chromeplugin.png)
+![Manage Environment](docs/diagram/manageenv.png)
+![Item Finder](docs/diagram/itemfinder.png)
+![Overall Flow](docs/diagram/overallflow.png)
+
   - Module Purpose
     Many times, when content authors and testers are working in higher environments, there is constant confusion if an item exists in Experience edge in a specific environment and there would be a dependency on the technical team to switch between environments or run CLI push/deployment/package install and check for item(s). This plugin negates such a dependency or ball-passing. This plugin also negates the need to run graphql queries by non-technical users like Content authors and testers. 
   - What problem was solved (if any)
