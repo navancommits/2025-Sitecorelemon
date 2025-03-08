@@ -92,16 +92,15 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 4. Install the plugin: Click "Add to Chrome" on the plugin page. 
 
 
- The chrome plugin will be available only after review since it was submitted as part of the hackathon. So, until then follow this interim process to install the plugin manually:
+ The chrome plugin will be available only after plugin store review since it was submitted as part of the hackathon. So, until then follow this interim process to install the plugin manually:
 
-1. Unzip the file named - 
-2. Download the plugin: Obtain the zip file containing the Chrome plugin you want to install. 
-3. Extract the zip: Unzip the downloaded file to access the plugin folder. 
-4. Access Chrome extensions page: Go to "chrome://extensions" in your Chrome browser. 
-5. Enable Developer mode: Toggle the "Developer mode" switch in the top right corner. 
-6. Load unpacked: Click "Load unpacked". 
-7. Select the folder: Navigate to the extracted plugin folder and select it to install. 
-8. 
+1. Download the code as zip file from the repo - ![download](docs/images/download.png)
+2. Extract the zip: Unzip the downloaded file to see the plugin folder with manifest.json and popup.html - <download path>\2025-Sitecorelemon-main\2025-Sitecorelemon-main\src\Sitecore-XM-Cloud_ItemFinder 
+3. Access Chrome extensions page: Go to "chrome://extensions" in your Chrome browser. 
+4. Enable Developer mode: Toggle the "Developer mode" switch in the top right corner. 
+5. Load unpacked: Click "Load unpacked". 
+6. Select the folder: Navigate to the extracted plugin folder and select it to install - <download path>\2025-Sitecorelemon-main\2025-Sitecorelemon-main\src\Sitecore-XM-Cloud_ItemFinder
+
 
 ### Configuration
 ⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
