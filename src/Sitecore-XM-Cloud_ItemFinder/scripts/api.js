@@ -173,7 +173,7 @@ document.getElementById("sendRequest").addEventListener("click", () => {
     let dropdown = document.getElementById("key-dropdown");
 	//alert(dropdown.value)
 	if (!path || !language || !dropdown.value) {
-        alert("Fields are mandatory to find XMC status");
+        //alert("Fields are mandatory to find XMC status");
         return;
     }
      // Show the spinner without causing reflow by changing opacity instead of display
