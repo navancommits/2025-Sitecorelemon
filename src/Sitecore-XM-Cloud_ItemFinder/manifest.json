@@ -5,7 +5,7 @@
   "description": "A simple Chrome extension for testers and content editors to find if item is present in Sitecore XM Cloud Experience Edge across different environments.",
   "permissions": ["storage"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
   "action": {
     "default_popup": "popup.html",
@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["scripts/content.js"]
     }
   ]
 }

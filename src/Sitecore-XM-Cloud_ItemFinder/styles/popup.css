@@ -1,0 +1,90 @@
+h2 {
+  font-size: 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #f1f1f1;
+  transition: 0.3s;
+}
+
+.tab.active {
+  background-color: white;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: white;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.icon-btn {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;  
+  border: none;
+  
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  background-color: #ddd;
+}
+
+#storageValue {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#output {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
