@@ -27,7 +27,7 @@
     - How does this module solve it
 
     1. The module provides a single place to quickly check for items across environments. Content authors and testers will benefit from this plugin since publishing is their bread and butter. Since Content authors and testers will have access to the Sitecore content editor, they have access to the Sitecore item id and path. Also, experience edge doesn't have any graphical UI apart from the actual application front-end. So, this tool can provide a leaner interface to check the status of the item publish and take necessary further steps. 
-    2. The idea of integrating Azure OpenAI is to take this further in order to have Azure OpenAI model deployments specific to a project or a client and output business-oriented messages.
+    2. The idea of integrating Azure OpenAI is to take this further in order to have Azure OpenAI model custom deployments specific to a project or a client and output business-oriented messages.
 
 _You can alternately paste a [link here](#docs) to a document within this repo containing the description._
 
