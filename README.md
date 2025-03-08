@@ -111,7 +111,15 @@ _Remove this subsection if your entry does not require any configuration that is
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
 
-Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+1. Once the plugin is installed, you can pin it to the browser bar: ![Pin Plugin](docs/images/manageextpin.png)
+2. Thereafter click the icon ![Chrome ext icon](docs/images/icon.png) from browser bar
+3. First time, setup environment details - ![Manage Environment](docs/images/manageenv.png)
+4. Once setup, environment will be selectable in drop down in Item Finder tab - ![Item Finder](docs/images/itemfinder.png)
+5. Select the environment and enter item path or id and language to find the item state
+6. Non-existent item:![non-existent](docs/images/nonexistent.png)
+7. Not published item:![not published](docs/images/xmcfinder.png)
+8. Published item:![non-existent](docs/images/pubitem.png)
+9. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
 
 ## Comments
 If you'd like to make additional comments that is important for your module entry.
