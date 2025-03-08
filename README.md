@@ -58,7 +58,7 @@ Optional:
 No installation is required apart from this plugin
 - Or services that must be enabled/configured
 
-Although optional, if you want to utilise Azure-related AI functionilty, 
+Although optional, if you want to utilise Azure-related AI functionality, 
 For Speech, follow this:
 1. An Azure subscription. You can create one for free.
 2. Create an AI Services resource for Speech in the Azure portal.
@@ -105,7 +105,7 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 ### Configuration
 ⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
 
-_Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
+Such configurations are part of manage environment section in the plugin 
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
@@ -121,4 +121,4 @@ _Remove this subsection if your entry does not require any configuration that is
 9. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
 
 ## Comments
-If you'd like to make additional comments that is important for your module entry.
+It is good to test this module in your own XMC environment since that is the whole purpose of this plugin but I can share Azure keys to the judges based on request. Also, the demo video does showcase all the capabilities of the plugin.
