@@ -121,4 +121,4 @@ Such configurations are part of manage environment section in the plugin
 9. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
 
 ## Comments
-It is good to test this module in your own XMC environment since that is the whole purpose of this plugin but I can share Azure keys to the judges based on request. Also, the demo video does showcase all the capabilities of the plugin.
+It is good to test this module in your own XMC environment since that is the whole purpose of this plugin but I can share Azure keys to the judges based on request. Also, the demo video does showcase all the capabilities of the plugin. For further info, you can contact me at contactnavaneeth@gmail.com.
