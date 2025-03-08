@@ -1,6 +1,8 @@
 ## Team name
 ⟹ Sitecorelemon
 
+![Logo](docs/images/logo.png)
+
 ## Category
 ⟹ Sitecore Hackathon 2025 - Single Category
 
@@ -36,17 +38,35 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 3. Environment domain in url
 
 Optional:
-4. Azure Open AI Key
-5. Azure Speech Key
-6. Azure Open AI domain
-7.
+4. Azure resource region (how-to given in below section)
+5. Azure Speech Key (how-to given in below section)
+6. Azure Open AI domain (how-to given in below section)
+7. Azure Open AI Key (how-to given in below section)
 8.
 9.
 - Or other modules that must be installed
 No installation is required apart from this plugin
 - Or services that must be enabled/configured
+Although optional, if you want to utilise Azure-related AI functionilty, 
+For Speech, follow this:
+1. An Azure subscription. You can create one for free.
+2. Create an AI Services resource for Speech in the Azure portal.
+3. Get the Speech resource key and region. After your Speech resource is deployed, select Go to resource to view and manage keys.
 
-_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
+For deploying an Azure AI chatGPT model follow these steps:
+1. Sign in to Azure Portal: Go to the Azure portal and sign in with your Microsoft account. 
+2. Create an Azure OpenAI resource:
+3. Navigate to "Cognitive Services" or search for "Azure OpenAI". 
+4. Click "Create" and provide necessary details like subscription, resource group, and region. 
+5. Access Azure AI Foundry portal:
+6. Once the resource is created, go to the "Azure AI Foundry" portal. 
+7. Select a model to deploy: In the left sidebar, go to "Deployments". 
+8. Click "Create new deployment". 
+9. Choose a model from the available options, like "GPT-3.5 Turbo". 
+10. Configure deployment settings: Provide a unique deployment name. 
+11. Select the deployment type (Standard, Global Standard, etc.). 
+12. Set the "Tokens per Minute Rate Limit" if needed. 
+13. Deploy the model: Click "Deploy" to initiate the deployment process. 
 
 ## Installation instructions
 ⟹ Write a short clear step-wise instruction on how to install your module.  
@@ -79,16 +99,6 @@ _Remove this subsection if your entry does not require any configuration that is
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
 
 Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
-
-![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
-
-You can embed images of different formats too:
-
-![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
-
-And you can embed external images too:
-
-![Random](https://thiscatdoesnotexist.com/)
 
 ## Comments
 If you'd like to make additional comments that is important for your module entry.
