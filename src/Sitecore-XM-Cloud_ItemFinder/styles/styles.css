@@ -287,3 +287,8 @@ input:focus {
 	opacity: 1;
 }
 
+.disabled {
+	color: gray;
+	pointer-events: none; /* Prevents clicks while disabled */
+}
+

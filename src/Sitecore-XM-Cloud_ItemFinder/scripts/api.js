@@ -40,7 +40,7 @@ async function fetchSitecoreData(graphqlQuery, variables) {
 
 async function fetchPreviewData(graphqlQuery, variables) {    
     const apiKey = getValue(1); 
-	const endpoint = getValue(0) + "/sitecore/api/graph/edge?sc_cache=0&sc_apikey=" + apiKey; // Replace with your Sitecore Experience Edge endpoint
+	const endpoint = getValue(0) + "/sitecore/api/graph/edge?sc_apikey=" + apiKey; // Replace with your Sitecore Experience Edge endpoint
 
     const response = await fetch(endpoint, {
         method: "POST",
@@ -125,11 +125,36 @@ async function getAzureChatCompletion(userContent) {
 }
 
 document.getElementById("idOrPath").addEventListener("click", () => {
-     getAzureChatCompletion("How can you find Sitecore Item id or Sitecore Item Path from the content tree?");
+    
+    languageCode.classList.add('disabled');
+    idOrPath.classList.add('disabled');
+    const userQuery = "How can you find Sitecore Item id or Sitecore Item Path from the content tree?";
+				getAzureChatCompletion(userQuery).then(response => {
+					synthesizeSpeech(response);                    
+				});
+    
+     setTimeout(() => {
+        // Re-enable after the event is finished
+        languageCode.classList.remove('disabled');
+        idOrPath.classList.remove('disabled');
+    }, 60000); // Adjust the timeout based on your needs
+    
 });
 
 document.getElementById("languageCode").addEventListener("click", () => {
-     getAzureChatCompletion("Why is language important while looking for an item in Sitecore experience edge?");
+     
+    languageCode.classList.add('disabled');
+    idOrPath.classList.add('disabled');
+    const userQuery = "Why is language important while looking for an item in Sitecore experience edge?";
+				getAzureChatCompletion(userQuery).then(response => {
+					synthesizeSpeech(response);                    
+				});
+    
+     setTimeout(() => {
+        // Re-enable after the event is finished
+        languageCode.classList.remove('disabled');
+        idOrPath.classList.remove('disabled');
+    }, 60000); // Adjust the timeout based on your needs
 });
 
 /*
@@ -198,13 +223,13 @@ document.getElementById("sendRequest").addEventListener("click", () => {
             } else {                
                 //makeColor("colorLabel","red", "green");
 				colorLbl.style.backgroundColor = trafficColors.red; 
-				/*
+				
 				const userQuery = 'why is my sitecore item not found in experience edge?';
-				getChatCompletion(userQuery).then(response => {
-					console.log('AI Response:', response);
+				getAzureChatCompletion(userQuery).then(response => {
+					synthesizeSpeech(response);;
 				});
-				synthesizeSpeech("Item not found in Experience Edge");
-				*/
+				
+				
             }
         })
         .catch(error => {
