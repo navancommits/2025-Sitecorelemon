@@ -1,16 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrome Extension - Sitecore XM Cloud Item Finder</title>
-    <script src="scripts/popup.js" defer></script>
-    <script src="scripts/speech-sdk.js"></script>
-	<link rel="stylesheet" href="styles/styles.css">
-	<link rel="stylesheet" href="styles/popup.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMC Item Finder</title>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles/popup.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="/scripts/speech-sdk.js"></script>
+  <script src="/scripts/popup.js" defer></script>
+  <script src="/scripts/api.js" defer></script>
 </head>
 <body>
-    <h1>Hello, Chrome!</h1>
-    <button id="clickMe">Click Me</button>
+
+  <!-- Tab Navigation -->
+  <div class="tabs">
+    <div class="tab active" id="retrieve-tab">Item Finder</div>
+    <div class="tab" id="manage-tab">Manage Environment</div>
+  </div>
+
+  <!-- First Tab: Retrieve Stored Items -->
+  <div id="retrieve" class="tab-content active">    
+    
+    <p id="storageValue"></p>
+	 <div class="chat-container">
+        <div class="header">
+            <img src="./icons/xmc.png" alt="Sitecore XMC Logo" class="logo">
+            <h2>Experience Edge Item Finder</h2>
+        </div>
+		
+        <div class="input-area">
+			<select id="key-dropdown">
+			  <option value="">-- Select an Environment --</option>
+			</select>
+			<div class="horizontal">	
+				
+				<input type="text" id="pathInput" placeholder="Enter Sitecore Item Id or path...">
+				<span id="idOrPath" class="tooltip-container">
+					<i class="fas fa-volume-up"></i>					
+				</span>	
+			</div>
+			<div class="horizontal">	
+				
+				<input type="text" id="language" placeholder="E.g., en">
+				<span id="languageCode" class="tooltip-container">
+					<i class="fas fa-volume-up"></i>					
+				</span>	
+			</div>
+			
+			<button id="sendRequest">Find</button>
+			<div id="spinner" class="spinner" style="display: none;"></div> <!-- Spinner here -->
+		</div>
+		<div class="result-container">	
+			<div class="pair">
+				<div id="colorLabel2" class="label"></div>
+				<div id="result2" class="labelresult">Preview</div>
+			</div>
+			
+			<div class="pair">
+				<div id="colorLabel" class="label"></div>
+				<p id="result" class="labelresult">Experience Edge</p>
+			</div>
+		</div>
+    </div>
+  </div>
+
+  <!-- Second Tab: Manage LocalStorage -->
+  <div id="manage" class="tab-content">    
+    <div class="container">
+	  <div class='horizontal'>
+		<label for="key-input">* Environment Name:</label>
+		<span id="envName" class="tooltip-container">
+					<i class="fas fa-volume-up"></i>					
+		</span>	
+	  </div>
+      <input type="text" id="key-input" placeholder="E.g., SIT">
+      
+      <label for="url-input">Environment Url:</label>
+      <input type="text" id="url-input" placeholder="E.g., https://xmc-compname-projname-develop3303.sitecorecloud.io/sitecore/api/graph/edge">
+	  
+	  <label for="scapikey-input">SC Api Key:</label>
+      <input type="text" id="scapikey-input" placeholder="Item Guid: {467YUIDF0-20G1-4912-8B8B-E507CA6E925D}">
+	  
+	  <label for="eekey-input">Experience Edge Key:</label>
+      <input type="text" id="eekey-input" placeholder="From deploy app...">
+	  
+	  <label for="azureopenai-input">Azure Open AI Resource:</label>
+      <input type="text" id="azureopenai-input" placeholder="Format: https://azureopenairesourcename.openai.azure.com">
+	  
+	  <label for="azureopenaidep-input">Azure Open AI Deployment Name:</label>
+      <input type="text" id="azureopenaidep-input" placeholder="E.g.: gpt-4-2-dep">
+	  
+	  <label for="azureopenaikey-input">Azure Open AI Key:</label>
+      <input type="text" id="azureopenaikey-input" placeholder="E.g.: EN4sH7CrM3W4STnyPHJXsKa2VPor1iLTMcHrEKHhtqbxvWpAVllUJQQJ99BCACL06NaXJ3w3AAABACOGdf6B">
+	  
+	  <label for="azurespeechkey-input">Azure Speech Key:</label>
+      <input type="text" id="azurespeechkey-input" placeholder="E.g.: 6yu3MtX03NMoYxj0Kg9TFdxqTyo7lIcmgMOi8HuOlDWrF7m9IXTWJQQJ99CVACL93NaXJ3w3AAAYACOGuomw">
+	  
+	  <label for="azureregion-input">Azure Region:</label>
+      <input type="text" id="azureregion-input" placeholder="E.g.: australiaeast">
+    </div>
+
+    <div class="buttons">
+      <button class="icon-btn" id="save-btn" title="Save Item">
+        <i class="fas fa-save"></i>
+      </button>
+
+      <button class="icon-btn" id="remove-btn" title="Remove Item">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+
+      <button class="icon-btn" id="clear-btn" title="Clear Storage">
+        <i class="fas fa-broom"></i>
+      </button>
+    </div>
+
+    <p id="output"></p>
+  </div>
+
 </body>
 </html>
