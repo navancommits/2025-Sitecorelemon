@@ -21,11 +21,13 @@
 
   - Module Purpose
 
-    Many times, when content authors and testers are working in higher environments, there is constant confusion if an item exists in Experience edge in a specific environment and there would be a dependency on the technical team to switch between environments or run CLI push/deployment/package install and check for item(s). This plugin negates such a dependency or ball-passing. This plugin also negates the need to run graphql queries by non-technical users like Content authors and testers. 
+    1. Many times, when content authors and testers are working in higher environments, there is constant confusion if an item exists in Experience edge in a specific environment and there would be a dependency on the technical team to switch between environments or run CLI push/deployment/package install and check for item(s). This plugin negates such a dependency or ball-passing. This plugin also negates the need to run graphql queries by non-technical users like Content authors and testers. 
+    2. The second part of the plugin is to see the possibility of using client-side message as prompt to get chat completion, useful in  case of tooltip/help or provide insights about a particular scenario - for instance, if an item is not found in Experience Edge, chat completion responds with the reason and that is passed on to Speech API to output via microphone
   - What problem was solved (if any)
     - How does this module solve it
 
-    The module provides a single place to quickly check for items across environments. Content authors and testers will benefit from this plugin since publishing is their bread and butter. Since Content authors and testers will have access to the Sitecore content editor, they have access to the Sitecore item id and path. Also, experience edge doesn't have any graphical UI apart from the actual application front-end. So, this tool can provide a leaner interface to check the status of the item publish and take necessary further steps. 
+    1. The module provides a single place to quickly check for items across environments. Content authors and testers will benefit from this plugin since publishing is their bread and butter. Since Content authors and testers will have access to the Sitecore content editor, they have access to the Sitecore item id and path. Also, experience edge doesn't have any graphical UI apart from the actual application front-end. So, this tool can provide a leaner interface to check the status of the item publish and take necessary further steps. 
+    2. The idea of integrating Azure OpenAI is to take this further in order to have Azure OpenAI model deployments specific to a project or a client and output business-oriented messages.
 
 _You can alternately paste a [link here](#docs) to a document within this repo containing the description._
 
