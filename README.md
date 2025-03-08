@@ -46,8 +46,10 @@ Optional:
 8.
 9.
 - Or other modules that must be installed
+
 No installation is required apart from this plugin
 - Or services that must be enabled/configured
+
 Although optional, if you want to utilise Azure-related AI functionilty, 
 For Speech, follow this:
 1. An Azure subscription. You can create one for free.
