@@ -169,9 +169,13 @@ document.getElementById("scApiKey").addEventListener("click", () => {
 
 document.getElementById("sendRequest").addEventListener("click", () => {
     const path = document.getElementById("pathInput").value.trim();
-	//console.log("sfesf" + path)
-	if (!path) return;
-    
+    const language = document.getElementById("language").value.trim();
+    let dropdown = document.getElementById("key-dropdown");
+	//alert(dropdown.value)
+	if (!path || !language || !dropdown.value) {
+        alert("Fields are mandatory to find XMC status");
+        return;
+    }
      // Show the spinner without causing reflow by changing opacity instead of display
     const spinner = document.getElementById("spinner");
     spinner.style.opacity = "1";  // Make spinner visible
@@ -201,7 +205,7 @@ document.getElementById("sendRequest").addEventListener("click", () => {
     
     const variables = {
         path: path,
-        language: "en"
+        language: language
     };	
 
     fetchSitecoreData(query, variables)
@@ -226,7 +230,7 @@ document.getElementById("sendRequest").addEventListener("click", () => {
 				
 				const userQuery = 'why is my sitecore item not found in experience edge?';
 				getAzureChatCompletion(userQuery).then(response => {
-					synthesizeSpeech(response);;
+					synthesizeSpeech(response);
 				});
 				
 				
