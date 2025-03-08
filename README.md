@@ -76,10 +76,10 @@ For deploying an Azure AI chatGPT model follow these steps:
 
 > The installation is similar to how Chrome plugins are installed from the plugin store. The process is as follows:
 
-a. Open the Chrome Web Store: Navigate to "chrome://webstore" in your Chrome browser. 
-b. Search for the plugin: Use the search bar to type the name of the plugin you want to install. 
-c. Select the plugin: Click on the desired plugin from the search results. 
-d. Install the plugin: Click "Add to Chrome" on the plugin page. 
+1. Open the Chrome Web Store: Navigate to "chrome://webstore" in your Chrome browser. 
+2. Search for the plugin: Use the search bar to type the name of the plugin you want to install. 
+3. Select the plugin: Click on the desired plugin from the search results. 
+4. Install the plugin: Click "Add to Chrome" on the plugin page. 
 
 
  The chrome plugin will be available only after review since it was submitted as part of the hackathon. So, until then follow this interim process to install the plugin manually:
