@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Sitecore XM Cloud Item Finder",
   "version": "1.0",
-  "description": "A simple Chrome extension for testers and content editors to find if item is present in Sitecore XM Cloud Experience Edge across different environments.",
+  "description": "A Chrome extension to find the publish status of an item in Sitecore XM Cloud environment.",
   "permissions": ["storage"],
   "background": {
     "service_worker": "scripts/background.js"
