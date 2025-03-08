@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Sitecore XM Cloud Item Finder",
+  "version": "1.0",
+  "description": "A simple Chrome extension for testers and content editors to find if item is present in Sitecore XM Cloud Experience Edge across different environments.",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/favicon_16x16.png",
+      "48": "icons/favicon_48x48.png",
+      "128": "icons/favicon_128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
