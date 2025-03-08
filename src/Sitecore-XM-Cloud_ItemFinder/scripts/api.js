@@ -235,11 +235,11 @@ document.getElementById("sendRequest").addEventListener("click", () => {
 			
             if (data.item != null) {
 				colorLbl2.style.backgroundColor = trafficColors.green;
-            } else {               
+            } else {       
 				colorLbl2.style.backgroundColor = trafficColors.red;
             }
         })
-        .catch(error => {  
+        .catch(error => {
             // Hide the spinner if there's an error
             spinner.style.opacity = "0";  // Fade out spinner
             spinner.style.visibility = "hidden";  // Hide spinner from flow
