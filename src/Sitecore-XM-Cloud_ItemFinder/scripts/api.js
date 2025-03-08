@@ -20,6 +20,8 @@ async function fetchSitecoreData(graphqlQuery, variables) {
     const endpoint = "https://edge.sitecorecloud.io/api/graphql/v1"; // Sitecore Experience Edge endpoint
     const apiKey = getValue(2);
 
+    if (!apiKey) return;
+
     const response = await fetch(endpoint, {
         method: "POST",
         headers: {
@@ -40,6 +42,8 @@ async function fetchSitecoreData(graphqlQuery, variables) {
 async function fetchPreviewData(graphqlQuery, variables) {
     const apiKey = getValue(1);
 	const endpoint = getValue(0) + "/sitecore/api/graph/edge?sc_apikey=" + apiKey; // Preview endpoint
+
+    if (!apiKey || !endpoint) return;
 
     const response = await fetch(endpoint, {
         method: "POST",
@@ -62,6 +66,8 @@ async function getAzureChatCompletion(userContent) {
     const deploymentName = getValue(4); // Replace with your Azure AI deployment name
     const endpoint = getValue(3); // Replace with your Azure AI endpoint URL
     const apiKey = getValue(5); // Replace with your Azure API key
+
+    if (!apiKey || !endpoint || !deploymentName) return;
 
     const url = `${endpoint}/openai/deployments/${deploymentName}/chat/completions?api-version=2024-08-01-preview`;//could pass this from settings
     
@@ -98,6 +104,8 @@ async function getAzureChatCompletion(userContent) {
 	const SpeechSDK = window.SpeechSDK;
 	const speechKey = getValue(6);  // Replace with your key
 	const serviceRegion = getValue(7);  // Replace with your region
+
+    if (!speechKey || !serviceRegion) return;
 	
 	const speechConfig = window.SpeechSDK.SpeechConfig.fromSubscription(speechKey, serviceRegion);
 	speechConfig.speechSynthesisVoiceName = "en-US-JennyNeural"; // You can change the voice
