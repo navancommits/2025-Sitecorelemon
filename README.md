@@ -8,9 +8,9 @@
 ⟹ This is a Chrome plugin that can be useful to check if a Sitecore Item is present in XM Cloud preview and Experience edge endpoints - across different projects/environments, once configured. 
 
 ### XMC Item Finder Architecture Diagrams
-![Chrome Plugin Entities](docs/diagrams/chromeplugin.png)
+![Chrome Plugin Entities](docs/diagrams/chromepluginentities.png)
 ![Manage Environment](docs/diagrams/manageenv.png)
-![Item Finder](docs/diagrams/itemfinder.png)
+![Item Finder](docs/diagrams/Itemfinder.png)
 ![Overall Flow](docs/diagrams/overallflow.png)
 
   - Module Purpose
