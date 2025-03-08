@@ -38,6 +38,7 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 3. Environment domain in url
 
 Optional:
+
 4. Azure resource region (how-to given in below section)
 5. Azure Speech Key (how-to given in below section)
 6. Azure Open AI domain (how-to given in below section)
