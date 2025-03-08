@@ -82,14 +82,7 @@ For deploying an Azure OpenAI chatGPT model follow these steps:
 Once the chat model is deployed, you can get the deployment name, resource name and OpenAI key  - https://www.youtube.com/watch?v=4DiTF8k0b0U&t=17s
 
 ## Installation instructions
-⟹ Write a short clear step-wise instruction on how to install your module.  
-
-> The installation is similar to how Chrome plugins are installed from the plugin store. The process is as follows:
-
-1. Open the Chrome Web Store: Navigate to "chrome://webstore" in your Chrome browser. 
-2. Search for the plugin: Use the search bar to type the name of the plugin you want to install. 
-3. Select the plugin: Click on the desired plugin from the search results. 
-4. Install the plugin: Click "Add to Chrome" on the plugin page. 
+⟹ Write a short clear step-wise instruction on how to install your module. 
 
 
  The chrome plugin will be available only after plugin store review since it was submitted as part of the hackathon. So, until then follow this interim process to install the plugin manually:
@@ -100,6 +93,13 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 4. Enable Developer mode: Toggle the "Developer mode" switch in the top right corner. 
 5. Load unpacked: Click "Load unpacked". 
 6. Select the folder: Navigate to the extracted plugin folder and select it to install - <download path>\2025-Sitecorelemon-main\2025-Sitecorelemon-main\src\Sitecore-XM-Cloud_ItemFinder
+
+> Once the plugin is available in the Chrome store, the installation is similar to how Chrome plugins are installed from the plugin store. The process is as follows:
+
+1. Open the Chrome Web Store: Navigate to "chrome://webstore" in your Chrome browser. 
+2. Search for the plugin: Use the search bar to type the name of the plugin you want to install. 
+3. Select the plugin: Click on the desired plugin from the search results. 
+4. Install the plugin: Click "Add to Chrome" on the plugin page. 
 
 
 ### Configuration
