@@ -72,7 +72,7 @@ For deploying an Azure OpenAI chatGPT model follow these steps:
 6. Once the resource is created, go to the "Azure AI Foundry" portal. 
 7. Select a model to deploy: In the left sidebar, go to "Deployments". 
 8. Click "Create new deployment". 
-9. Choose a model from the available options, like "GPT-3.5 Turbo". 
+9. Choose gpt-4 model from the available options. 
 10. Configure deployment settings: Provide a unique deployment name. 
 11. Select the deployment type (Standard, Global Standard, etc.). 
 12. Set the "Tokens per Minute Rate Limit" if needed. 
