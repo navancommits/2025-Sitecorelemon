@@ -1,8 +1,6 @@
 ## Team name
 ⟹ Sitecorelemon
 
-![Logo](docs/images/logo.png)
-
 ## Category
 ⟹ Sitecore Hackathon 2025 - Single Category
 
