@@ -84,7 +84,8 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 ⟹ Write a short clear step-wise instruction on how to install your module. 
 
 
- The chrome plugin will be available only after plugin store review since it was submitted as part of the hackathon. So, until then follow this interim process to install the plugin manually:
+ The chrome plugin will be available only after plugin store review since it was submitted as part of the hackathon. ![plugin review](docs/images/pluginreview.png)
+ So, until then follow this interim process to install the plugin manually:
 
 1. Download the code as zip file from the repo - ![download](docs/images/download.png) or you could use the plugin zip - under src folder - Sitecore-XM-Cloud_ItemFinder.zip
 2. Extract the zip: Unzip the downloaded file to locate the plugin folder with manifest.json and popup.html named Sitecore-XM-Cloud_ItemFinder 
