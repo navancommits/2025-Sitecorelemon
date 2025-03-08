@@ -16,10 +16,9 @@ function getValue(index)  {
 	return value.split(",")[index];
 }
 
-async function fetchSitecoreData(graphqlQuery, variables) {	
-    const endpoint = "https://edge.sitecorecloud.io/api/graphql/v1"; // Replace with your Sitecore Experience Edge endpoint
-    const apiKey = getValue(2); 
-	//alert(apiKey);
+async function fetchSitecoreData(graphqlQuery, variables) {
+    const endpoint = "https://edge.sitecorecloud.io/api/graphql/v1"; // Sitecore Experience Edge endpoint
+    const apiKey = getValue(2);
 
     const response = await fetch(endpoint, {
         method: "POST",
@@ -38,9 +37,9 @@ async function fetchSitecoreData(graphqlQuery, variables) {
     return result.data;
 }
 
-async function fetchPreviewData(graphqlQuery, variables) {    
-    const apiKey = getValue(1); 
-	const endpoint = getValue(0) + "/sitecore/api/graph/edge?sc_apikey=" + apiKey; // Replace with your Sitecore Experience Edge endpoint
+async function fetchPreviewData(graphqlQuery, variables) {
+    const apiKey = getValue(1);
+	const endpoint = getValue(0) + "/sitecore/api/graph/edge?sc_apikey=" + apiKey; // Preview endpoint
 
     const response = await fetch(endpoint, {
         method: "POST",
@@ -64,7 +63,7 @@ async function getAzureChatCompletion(userContent) {
     const endpoint = getValue(3); // Replace with your Azure AI endpoint URL
     const apiKey = getValue(5); // Replace with your Azure API key
 
-    const url = `${endpoint}/openai/deployments/${deploymentName}/chat/completions?api-version=2024-08-01-preview`;
+    const url = `${endpoint}/openai/deployments/${deploymentName}/chat/completions?api-version=2024-08-01-preview`;//could pass this from settings
     
     const requestBody = {
         messages: [
@@ -92,7 +91,6 @@ async function getAzureChatCompletion(userContent) {
         synthesizeSpeech(data.choices[0].message.content);
     } catch (error) {
         console.error("Error fetching chat completion:", error);
-        //document.getElementById("response").innerText = "Error: " + error.message;
     }
 }
 
@@ -125,7 +123,6 @@ async function getAzureChatCompletion(userContent) {
 }
 
 document.getElementById("idOrPath").addEventListener("click", () => {
-    
     languageCode.classList.add('disabled');
     idOrPath.classList.add('disabled');
     const userQuery = "How can you find Sitecore Item id or Sitecore Item Path from the content tree?";
@@ -142,7 +139,6 @@ document.getElementById("idOrPath").addEventListener("click", () => {
 });
 
 document.getElementById("languageCode").addEventListener("click", () => {
-     
     languageCode.classList.add('disabled');
     idOrPath.classList.add('disabled');
     const userQuery = "Why is language important while looking for an item in Sitecore experience edge?";
@@ -157,25 +153,13 @@ document.getElementById("languageCode").addEventListener("click", () => {
     }, 60000); // Adjust the timeout based on your needs
 });
 
-/*
-document.getElementById("edgeApiKey").addEventListener("click", () => {
-     getAzureChatCompletion("how to  find the edge api key for an xm cloud environment in the deploy app?");
-});
-
-document.getElementById("scApiKey").addEventListener("click", () => {
-     getAzureChatCompletion("how to find the sitecore security api key?");
-});
-*/
-
 document.getElementById("sendRequest").addEventListener("click", () => {
     const path = document.getElementById("pathInput").value.trim();
     const language = document.getElementById("language").value.trim();
     let dropdown = document.getElementById("key-dropdown");
-	//alert(dropdown.value)
-	if (!path || !language || !dropdown.value) {
-        //alert("Fields are mandatory to find XMC status");
-        return;
-    }
+	
+	if (!path || !language || !dropdown.value) return;
+    
      // Show the spinner without causing reflow by changing opacity instead of display
     const spinner = document.getElementById("spinner");
     spinner.style.opacity = "1";  // Make spinner visible
@@ -187,7 +171,7 @@ document.getElementById("sendRequest").addEventListener("click", () => {
     chatContainer.style.backgroundColor = "#E8E9EB";  // Set blue background color
 	
 	const colorLbl = document.getElementById("colorLabel");
-	const colorLbl2 = document.getElementById("colorLabel2");	
+	const colorLbl2 = document.getElementById("colorLabel2");
 	
 	const trafficColors = {
 	  red: "#D93025",
@@ -209,31 +193,23 @@ document.getElementById("sendRequest").addEventListener("click", () => {
     };	
 
     fetchSitecoreData(query, variables)
-        .then(data => {
-            console.log("Fetched Data:", data);
-            //document.getElementById("result").innerText = JSON.stringify(data, null, 2);
-                      
+        .then(data => { 
 			// Hide the spinner once the response is received
             spinner.style.opacity = "0";  // Fade out spinner
             spinner.style.visibility = "hidden";  // Hide spinner from flow
 
             // Reset form background color after processing
             chatContainer.style.backgroundColor = "white";  // Reset to white background
-			//document.getElementById("result").innerText = "Experience Edge";
 						
-            if (data.item != null) {                
-                //makeColor("colorLabel","green", "red");				
-				colorLbl.style.backgroundColor = trafficColors.green; 
+            if (data.item != null) {       		
+				colorLbl.style.backgroundColor = trafficColors.green;
             } else {                
-                //makeColor("colorLabel","red", "green");
-				colorLbl.style.backgroundColor = trafficColors.red; 
+				colorLbl.style.backgroundColor = trafficColors.red;
 				
 				const userQuery = 'why is my sitecore item not found in experience edge?';
 				getAzureChatCompletion(userQuery).then(response => {
 					synthesizeSpeech(response);
 				});
-				
-				
             }
         })
         .catch(error => {
@@ -243,68 +219,37 @@ document.getElementById("sendRequest").addEventListener("click", () => {
             spinner.style.visibility = "hidden";  // Hide spinner from flow
             
             // Reset form background color after processing
-            chatContainer.style.backgroundColor = "white";  // Reset to white background
-         
-            //document.getElementById("result").innerText = "Experience Edge";
-            //makeColor("colorLabel","red", "green");
-			colorLbl.style.backgroundColor = trafficColors.red; 
+            chatContainer.style.backgroundColor = "white";  // Reset to white background  
+            
+			colorLbl.style.backgroundColor = trafficColors.red;
         });
-		
 	
 	fetchPreviewData(query, variables)
         .then(data => {
-            console.log("Fetched Data:", data);
-            //document.getElementById("result2").innerText = JSON.stringify(data, null, 2);
-                      
 			// Hide the spinner once the response is received
             spinner.style.opacity = "0";  // Fade out spinner
             spinner.style.visibility = "hidden";  // Hide spinner from flow
 
             // Reset form background color after processing
             chatContainer.style.backgroundColor = "white";  // Reset to white background
-			//document.getElementById("result2").innerText = "Preview";
 			
-            if (data.item != null) {                
-                //makeColor("colorLabel2","green", "red");
-				colorLbl2.style.backgroundColor = trafficColors.green; 
-            } else {                
-                //makeColor("colorLabel2","red", "green");
-				colorLbl2.style.backgroundColor = trafficColors.red; 
-				
-				/*
-				const userQuery = 'why is my sitecore item not found in experience edge?';
-				getAzureChatCompletion(userQuery).then(response => {
-					console.log('AI Response:', response);
-				});
-				synthesizeSpeech("Item not found in Experience Edge");
-				*/
+            if (data.item != null) {
+				colorLbl2.style.backgroundColor = trafficColors.green;
+            } else {               
+				colorLbl2.style.backgroundColor = trafficColors.red;
             }
         })
-        .catch(error => {
-            console.error("Error fetching data:", error);
+        .catch(error => {  
             // Hide the spinner if there's an error
             spinner.style.opacity = "0";  // Fade out spinner
             spinner.style.visibility = "hidden";  // Hide spinner from flow
             
             // Reset form background color after processing
-            chatContainer.style.backgroundColor = "white";  // Reset to white background
-         
-            //document.getElementById("result2").innerText = "Preview";
-            //makeColor("colorLabel2","red", "green");
-			colorLbl2.style.backgroundColor = trafficColors.red; //"#FF8488"; 
+            chatContainer.style.backgroundColor = "white";  // Reset to white background 
+        	colorLbl2.style.backgroundColor = trafficColors.red; //"#FF8488";
         });
 });
 
-function makeColor(labelId, color, remove) {
-    let label = document.getElementById(labelId);
-    if (label.classList.contains(remove)) {
-        label.classList.remove(remove);
-        label.classList.add(color);
-    } else {
-        label.classList.remove(color);
-        label.classList.add(color);
-    }
-}
 
 
 
