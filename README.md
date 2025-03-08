@@ -116,7 +116,7 @@ _Remove this subsection if your entry does not require any configuration that is
 3. First time, setup environment details - ![Manage Environment](docs/images/manageenv.png)
 4. Once setup, environment will be selectable in drop down in Item Finder tab - ![Item Finder](docs/images/itemfinder.png)
 5. Select the environment and enter item path or id and language to find the item state
-6. Non-existent item:![non-existent](docs/images/nonexistent.png)
+6. Non-existent item:![non-existent](docs/images/notexistent.png)
 7. Not published item:![not published](docs/images/xmcfinder.png)
 8. Published item:![non-existent](docs/images/pubitem.png)
 9. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
