@@ -41,18 +41,18 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 ⟹ Does your module rely on other Sitecore modules or frameworks?
 
 - List any dependencies
-1. Sitecore XM Cloud Experience Edge key
-2. Sitecore Security API Key
+1. Sitecore XM Cloud Experience Edge key - https://doc.sitecore.com/xmc/en/developers/xm-cloud/generate-an-edge-token.html#generate-an-edge-token-using-the-xm-cloud-deploy-app
+2. Sitecore Security API Key - picked from here - master\sitecore\system\Settings\Services\API Keys folder
 3. Environment domain in url
 
 Optional:
 
-4. Azure resource region (how-to given in below section)
-5. Azure Speech Key (how-to given in below section)
-6. Azure Open AI domain (how-to given in below section)
-7. Azure Open AI Key (how-to given in below section)
-8.
-9.
+4. Azure resource region (how-to in below speech section)
+5. Azure Speech Key (how-to in below speech section)
+6. Azure Open AI resource (how-to in below OpenAI section)
+7. Azure Open AI Key (how-to in below OpenAI section)
+8. Azure Open AI Deployment name (how-to in below OpenAI section)
+
 - Or other modules that must be installed
 
 No installation is required apart from this plugin
@@ -62,9 +62,9 @@ Although optional, if you want to utilise Azure-related AI functionilty,
 For Speech, follow this:
 1. An Azure subscription. You can create one for free.
 2. Create an AI Services resource for Speech in the Azure portal.
-3. Get the Speech resource key and region. After your Speech resource is deployed, select Go to resource to view and manage keys.
+3. Get the Speech resource key and region. After your Speech resource is deployed, select Go to resource to view and manage keys - https://youtu.be/4_20T3MTlCU?si=_ajQodRLTeNiKp0h&t=94
 
-For deploying an Azure AI chatGPT model follow these steps:
+For deploying an Azure OpenAI chatGPT model follow these steps:
 1. Sign in to Azure Portal: Go to the Azure portal and sign in with your Microsoft account. 
 2. Create an Azure OpenAI resource:
 3. Navigate to "Cognitive Services" or search for "Azure OpenAI". 
@@ -78,6 +78,8 @@ For deploying an Azure AI chatGPT model follow these steps:
 11. Select the deployment type (Standard, Global Standard, etc.). 
 12. Set the "Tokens per Minute Rate Limit" if needed. 
 13. Deploy the model: Click "Deploy" to initiate the deployment process. 
+
+Once the chat model is deployed, you can get the deployment name, resource name and OpenAI key  - https://www.youtube.com/watch?v=4DiTF8k0b0U&t=17s
 
 ## Installation instructions
 ⟹ Write a short clear step-wise instruction on how to install your module.  
