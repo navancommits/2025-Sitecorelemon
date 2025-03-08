@@ -14,11 +14,5 @@
       "48": "icons/favicon_48x48.png",
       "128": "icons/favicon_128x128.png"
     }
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["scripts/content.js"]
-    }
-  ]
+  }
 }
