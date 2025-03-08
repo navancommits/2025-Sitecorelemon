@@ -1,0 +1,289 @@
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+}
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.content {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+#storageList {
+  margin-top: 20px;
+}
+
+#storageList button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#storageList button:hover {
+  color: red;
+}
+
+.chat-container {
+	width: 100%;
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+/* Header section */
+.header {
+	display: flex;
+	justify-content: center; /* Center align logo and heading */
+	align-items: center; /* Vertically center align */
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.header h2 {
+	font-size: 18px;
+	color: #333;
+	font-weight: 600;
+	margin-left: 10px; /* Space between logo and heading */
+}
+
+.logo {
+	width: 25px;
+	height: auto;
+	border-radius: 10px; /* Rounded corners */
+}
+
+/* Input and button styling */
+.input-area {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+	width: 100%;
+	padding: 10px 15px;
+	border: none;
+	background-color: #007bff;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+/* Focus state for input */
+input:focus {
+	border-color: #007bff;
+}
+
+/* Result display section */
+.result-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center; /* Align label and text vertically */
+	gap: 50px; /* Space between label and text */
+	margin-top: 20px;
+	margin-left: 5px;
+	
+}
+
+/* Styling for colorLabel2 and result2 */
+#colorLabel2,#colorLabel {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border-radius: 10px;
+	height: 16px;
+	width: 16px;
+	border: 1px solid black;
+}
+
+#result2 {
+    font-weight: normal;
+    font-size: 16px;
+    color: black;
+}
+
+.pair {
+    display: flex;
+    gap: 7px; /* Space between label and result within each pair */
+    align-items: center;
+}
+
+#result {
+    font-weight: normal;
+    font-size: 16px;
+    color: black;
+}
+
+.colorCode {
+	flex-shrink: 0; /* Prevents resizing */
+	BORDER-RADIUS:20PX;
+}
+
+.labelresult {
+	font-size: 16px;
+	color: #333;
+	font-weight: 500;
+}
+
+.label {
+	display: inline-block;
+	width: 25px;
+	height: 25px;           
+	
+}
+.red {
+	background-color: red;
+	border: 1px solid black;
+}
+.green {
+	background-color: green;
+	border: 1px solid black;
+}
+.white {
+	background-color: white;
+	border: 1px solid black;
+}
+
+.spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-top: 4px solid #007bff;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 1s linear infinite;
+	margin-left: 10px;
+	position: absolute;  /* Make it independent of other elements */
+	top: 50%;  /* Position it centered */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;  /* Initially hidden */
+	opacity: 0;  /* Initially invisible */
+	transition: opacity 0.3s ease;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.horizontal {
+    display: flex;
+    align-items: center; /* Vertically align the input and icon in the middle */
+    gap: 8px; /* Optional: Adjust space between input and icon */
+}
+
+#pathInput {
+    flex: 1; /* Allow input to take up available space */
+    min-width: 200px; /* Set a reasonable minimum width for input */
+}
+
+.tooltip-container {
+    display: flex;
+    align-items: center; /* Vertically align the icon */
+	margin-bottom: 10px;
+}
+
+.tooltip-container {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tooltip-text {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
