@@ -93,6 +93,7 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 4. Enable Developer mode: Toggle the "Developer mode" switch in the top right corner. 
 5. Load unpacked: Click "Load unpacked". 
 6. Select the folder: Navigate to the extracted plugin folder and select it to install - <download path>\2025-Sitecorelemon-main\2025-Sitecorelemon-main\src\Sitecore-XM-Cloud_ItemFinder
+7. Extension gets added like this - ![Extension added](docs/images/extadded.png)
 
 > Once the plugin is available in the Chrome store, the installation is similar to how Chrome plugins are installed from the plugin store. The process is as follows:
 
