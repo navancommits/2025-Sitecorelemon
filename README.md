@@ -100,7 +100,7 @@ xmcenvurldomain,scApikey,deployappexpedgeapikey,azureopenaidomain,gpt-4-modelnam
 
 Note that if you don't provide specific values in the above string like, azure open ai domain or others, the plugin won't have those features but will continue to work with the remaining values but ensure to retain the blank values via comma separation so that the plugin understands what is missing.
 
-For instance, the following value string will work fine by locating an item in experience edge (provided that the EE key and XMC env domain name is correct)  but won't work for preview since the SC API Key is missing - 
+For instance, the following value will work fine by locating an item in experience edge (provided that the EE key and XMC env domain name is correct)  but won't work for preview since the SC API Key is missing - 
 https://xmc-abc-mylatestpro1234-develop5503.sitecorecloud.io,,Flhxo03vNUhkVTZlRnkiaHRYYXE0N0loODFxWHkzQWd0aDhWNExjY1BlZz18YWNlaWs5ZDJkOKi5bGF0ZXN0cHJvMTBiNS1kZXZlbG9wMzMwMy1hYl12,,,,,
 
 ## Usage instructions
