@@ -113,10 +113,13 @@ https://xmc-abc-mylatestpro1234-develop5503.sitecorecloud.io,,Flhxo03vNUhkVTZlRn
 5. Select the environment and enter item path or id and language to find the item state
 6. Non-existent item:
    ![non-existent](docs/images/notexistent.png)
+   
 8. Not published item:
    ![not published](docs/images/xmcfinder.png)
+   
 10. Published item:
     ![non-existent](docs/images/pubitem.png)
+    
    Note: if you are using path instead of item id to find the item, ensure to prefix the path with / for instance, "/sitecore" as path will provide you correct result and just "sitecore" will result in item not found
 12. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
 
