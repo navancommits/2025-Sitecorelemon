@@ -94,7 +94,7 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 ### Configuration
 ⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
 
-Such configurations are part of manage environment section in the plugin. If you don't want to use the manage environment tab, replace the following delimited string with environment-specific values and add it with a unique key in plugin' local storage under inspect > Application > local storage
+Environment configuration is part of manage environment section in the plugin. If you don't want to use the manage environment tab, replace the following delimited string with environment-specific values and add it with a unique key in plugin' local storage under inspect > Application > local storage
 
 xmcenvurldomain,scApikey,deployappexpedgeapikey,azureopenaidomain,gpt-4-modelname,AzureOpenAIKey,AzureSpeechkey,AzureRegion
 
