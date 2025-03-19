@@ -108,13 +108,14 @@ https://xmc-abc-mylatestpro1234-develop5503.sitecorecloud.io,,Flhxo03vNUhkVTZlRn
 
 1. Once the plugin is installed, you can pin it to the browser bar: ![Pin Plugin](docs/images/manageextpin.png)
 2. Thereafter click the icon ![Chrome ext icon](docs/images/icon.png) from browser bar
-3. First time, setup environment details - ![Manage Environment](docs/images/manageenv.png)
+3. First time, setup environment details or stick the key and value as specified above in Configuration section - ![Manage Environment](docs/images/manageenv.png)
 4. Once setup, environment will be selectable in drop down in Item Finder tab - ![Item Finder](docs/images/itemfinder.png)
 5. Select the environment and enter item path or id and language to find the item state
 6. Non-existent item:![non-existent](docs/images/notexistent.png)
 7. Not published item:![not published](docs/images/xmcfinder.png)
 8. Published item:![non-existent](docs/images/pubitem.png)
-9. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
+   Note: if you are using path instead of item id to find the item, ensure to prefix the path with / for instance, "/sitecore" as path will provide you correct result and just "sitecore" will result in item not found
+10. If Azure OpenAI is configured in manage environment, use speaker icon to get contextual tooltip - ![speaker](docs/images/speaker.png)
 
 ## Comments
 It is good to test this module in your own XMC environment since that is the whole purpose of this plugin but I can share Azure keys to the judges based on request. Also, the demo video does showcase all the capabilities of the plugin. For further info, you can contact me at contactnavaneeth@gmail.com.
