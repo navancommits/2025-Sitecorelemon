@@ -84,23 +84,11 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 ⟹ Write a short clear step-wise instruction on how to install your module. 
 
 
- The chrome plugin will be available only after plugin store review since it was submitted as part of the hackathon. ![plugin review](docs/images/pluginreview.png)
- So, until then follow this interim process to install the plugin manually:
-
-1. Download the code as zip file from the repo - ![download](docs/images/download.png) or you could use the plugin zip - under src folder - Sitecore-XM-Cloud_ItemFinder.zip
-2. Extract the zip: Unzip the downloaded file to locate the plugin folder with manifest.json and popup.html named Sitecore-XM-Cloud_ItemFinder 
-3. Access Chrome extensions page: Go to "chrome://extensions" in your Chrome browser. 
-4. Enable Developer mode: Toggle the "Developer mode" switch in the top right corner. 
-5. Load unpacked: Click "Load unpacked". 
-6. Select the folder: Navigate to the extracted plugin folder and select it to install - Sitecore-XM-Cloud_ItemFinder
-7. Extension gets added like this - ![Extension added](docs/images/extadded.png)
-
-> Once the plugin is available in the Chrome store, the installation is similar to how Chrome plugins are installed from the plugin store. The process is as follows:
-
-1. Open the Chrome Web Store: Navigate to "chrome://webstore" in your Chrome browser. 
-2. Search for the plugin: Use the search bar to type the name of the plugin you want to install. 
-3. Select the plugin: Click on the desired plugin from the search results. 
-4. Install the plugin: Click "Add to Chrome" on the plugin page. 
+ The chrome plugin is now available in the store. ![image](https://github.com/user-attachments/assets/3d7f3ce3-c8a9-44d4-a82e-7f1eea948aaf)
+ 
+1. Search for the plugin: Use the search bar to type the name of the plugin you want to install. 
+2. Select the plugin: Click on the desired plugin from the search results. 
+3. Install the plugin: Click "Add to Chrome" on the plugin page. 
 
 
 ### Configuration
