@@ -112,7 +112,7 @@ https://xmc-abc-mylatestpro1234-develop5503.sitecorecloud.io,,Flhxo03vNUhkVTZlRn
 4. Once setup, environment will be selectable in drop down in Item Finder tab - ![Item Finder](docs/images/itemfinder.png)
 5. Select the environment and enter item path or id and language to find the item state
 
-6. Non-existent item:
+6. Non-existent item -
    ![non-existent](docs/images/notexistent.png)
    
 7. Not published item:
