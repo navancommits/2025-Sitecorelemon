@@ -106,7 +106,14 @@ Once the chat model is deployed, you can get the deployment name, resource name 
 ### Configuration
 ⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
 
-Such configurations are part of manage environment section in the plugin 
+Such configurations are part of manage environment section in the plugin. If you don't want to use the manage environment tab, replace the following delimited string with environment-specific values and add it with a unique key in plugin' local storage under inspect > Application > local storage
+
+xmcenvurldomain,scApikey,deployappexpedgeapikey,azureopenaidomain,gpt-4-modelname,AzureOpenAIKey,AzureSpeechkey,AzureRegion
+
+Note that if you don't provide specific values in the above string like, azure open ai domain or others, the plugin won't have those features but will continue to work with the remaining values but ensure to retain the blank values via comma separation so that the plugin understands what is missing.
+
+For instance, the following value string will work fine by locating an item in experience edge (provided that the EE key and XMC env domain name is correct)  but won't work for preview since the SC API Key is missing - 
+https://xmc-abc-mylatestpro1234-develop5503.sitecorecloud.io,,Flhxo03vNUhkVTZlRnkiaHRYYXE0N0loODFxWHkzQWd0aDhWNExjY1BlZz18YWNlaWs5ZDJkOKi5bGF0ZXN0cHJvMTBiNS1kZXZlbG9wMzMwMy1hYl12,,,,,
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
